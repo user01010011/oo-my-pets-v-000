@@ -2,7 +2,7 @@ class Owner
   attr_reader :name, :species
 
   @@all = [ ]
-  
+
   def initialize(name)
     @name = name
     @species = "human"
@@ -12,7 +12,7 @@ class Owner
   def say_species
     puts "I am a #{self.species}."
   end
-  
+
   def self.all
     @@all
   end
@@ -25,7 +25,7 @@ class Owner
     self.all.clear
   end
 
-  def cats 
+  def cats
     Cat.all.select{|cat|cat.owner == self}
   end
 
